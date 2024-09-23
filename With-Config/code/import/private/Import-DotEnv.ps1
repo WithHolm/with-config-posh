@@ -1,4 +1,3 @@
-
 function Import-DotEnv {
     [CmdletBinding()]
     param (

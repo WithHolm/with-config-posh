@@ -72,7 +72,8 @@ function Import-Wconfig {
             contents = ""
             data = @{}
         }
-        New-PwshOtelLog "Importing config of type $type" -Severity verbose
+        Write-Verbose "Importing config of type $type"
+        # New-PwshOtelLog "Importing config of type $type" -Severity verbose
         switch($type) {
             "json" {
                 foreach($ConfigFile in $FoundConfig|?{$_.Extension -in @(".json", ".jsonc")}) {
